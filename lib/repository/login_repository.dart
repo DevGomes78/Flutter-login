@@ -17,7 +17,7 @@ class LoginPage {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => UserPage(),
+            builder: (context) => const UserPage(),
           ),
         );
       } else {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_user/components/shimmer_page.dart';
+import 'package:login_user/pages/shimmer_page.dart';
 import 'package:login_user/models/user_model.dart';
 import 'package:login_user/repository/user_repository.dart';
 

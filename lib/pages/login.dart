@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_user/components/container_widget.dart';
+import 'package:login_user/components/text_widget.dart';
 import 'package:login_user/repository/login_repository.dart';
 
 class Login extends StatelessWidget {
@@ -25,62 +27,34 @@ class Login extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              TextField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  hintText: 'Digite o login',
-                  labelText: 'login',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  prefixIcon: const Icon(Icons.login),
-                ),
-                controller: loginControler,
+              TextWidget(
+                'Digite o Login',
+                'Login',
+                const Icon(Icons.login),
+                loginControler,
               ),
               const SizedBox(
                 height: 20,
               ),
-              TextField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  hintText: 'Digite a senha',
-                  labelText: 'Senha',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  prefixIcon: const Icon(Icons.lock),
-                ),
-                controller: senhaControler,
+              TextWidget(
+                'Digite a senha',
+                'Senha',
+                const Icon(Icons.login),
+                senhaControler,
               ),
               const SizedBox(
                 height: 20,
               ),
               InkWell(
-                onTap: () {
-                  LoginPage().login(
-                    context,
-                    loginControler.text = 'eve.holt@reqres.in',
-                    senhaControler.text='cityslicka',
-                  );
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 50,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Colors.white,
-                  ),
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              )
+                  onTap: () {
+                    LoginPage().login(
+                      context,
+                      loginControler.text = 'eve.holt@reqres.in',
+                      senhaControler.text = 'cityslicka',
+                    );
+                  },
+                  child: const ContainerWidget()
+              ),
             ],
           ),
         ),
@@ -88,3 +62,6 @@ class Login extends StatelessWidget {
     );
   }
 }
+
+
+
