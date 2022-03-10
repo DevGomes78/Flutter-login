@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:login_user/pages/user_page.dart';
 
 import 'login.dart';
 
@@ -11,6 +13,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Login do Usuario'),
         centerTitle: true,
+        elevation: 0,
       ),
       body: Login(),
     );

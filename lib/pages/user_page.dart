@@ -39,6 +39,14 @@ class _UserPageState extends State<UserPage> {
       appBar: AppBar(
         title: const Text('Lista de Usuario'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: loadUser,
+            icon: const Icon(
+              Icons.refresh,
+            ),
+          ),
+        ],
       ),
       body: buildPadding(),
     );

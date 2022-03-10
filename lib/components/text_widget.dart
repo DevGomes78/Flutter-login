@@ -5,13 +5,15 @@ class TextWidget extends StatelessWidget {
   String? label;
   Widget? icon;
   TextEditingController? controller;
+  bool senha;
 
   TextWidget(
     this.hint,
     this.label,
     this.icon,
-    this.controller,
-  );
+    this.controller, {
+    this.senha = true,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class TextWidget extends StatelessWidget {
         prefixIcon: icon,
       ),
       controller: controller,
+      obscureText: senha,
     );
   }
 }

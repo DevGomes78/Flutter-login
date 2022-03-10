@@ -32,6 +32,7 @@ class Login extends StatelessWidget {
                 'Login',
                 const Icon(Icons.login),
                 loginControler,
+                senha: false,
               ),
               const SizedBox(
                 height: 20,
@@ -41,6 +42,7 @@ class Login extends StatelessWidget {
                 'Senha',
                 const Icon(Icons.login),
                 senhaControler,
+                senha:  true,
               ),
               const SizedBox(
                 height: 20,
