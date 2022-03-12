@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
-  String? hint;
-  String? label;
+  String? hintText;
+  String? labelText;
   Widget? icon;
   TextEditingController? controller;
-  bool senha;
+  bool ObscureText;
 
   TextWidget(
-    this.hint,
-    this.label,
+    this.hintText,
+    this.labelText,
     this.icon,
     this.controller, {
-    this.senha = true,
+    this.ObscureText = true,
   });
 
   @override
@@ -20,15 +20,15 @@ class TextWidget extends StatelessWidget {
     return TextField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        hintText: hint,
-        labelText: label,
+        hintText: hintText,
+        labelText: labelText,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
         ),
         prefixIcon: icon,
       ),
       controller: controller,
-      obscureText: senha,
+      obscureText: ObscureText,
     );
   }
 }
